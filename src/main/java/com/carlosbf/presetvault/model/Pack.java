@@ -18,6 +18,9 @@ public class Pack {
     @OneToOne
     private User    owner;
 
+    public Pack() {
+    }
+
     public Pack(String name) {
         this.name = name;
         datePosted = new Date();

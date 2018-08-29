@@ -15,6 +15,9 @@ public class Preset {
     private String  fileURL;
     private Pack    pack;
 
+    public Preset() {
+    }
+
     public Preset(String fileURL) {
         this.fileURL = fileURL;
     }

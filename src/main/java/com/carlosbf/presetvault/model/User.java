@@ -22,6 +22,8 @@ public class User {
     @ManyToMany
     private List<User> following;
 
+    public User() {
+    }
 
     public User(String firstName, String lastName, String userName) {
         this.firstName = firstName;
