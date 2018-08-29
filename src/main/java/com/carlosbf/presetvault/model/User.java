@@ -3,7 +3,6 @@ package com.carlosbf.presetvault.model;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Objects;
 
 @Entity
@@ -22,11 +21,6 @@ public class User {
     private List<User> followers;
     @ManyToMany
     private List<User> following;
-
-//    @ManyToMany
-//    private List<User> followers;
-//    @OneToMany
-//    private List<Pack> packs;
 
 
     public User(String firstName, String lastName, String userName) {
@@ -130,8 +124,9 @@ public class User {
                 ", lastName='" + lastName + '\'' +
                 ", userName='" + userName + '\'' +
                 ", socialMediaLinks=" + socialMediaLinks +
-//                ", followers=" + followers +
-//                ", packs=" + packs +
+                ", presetPacks=" + presetPacks +
+                ", followers=" + followers +
+                ", following=" + following +
                 '}';
     }
 }
