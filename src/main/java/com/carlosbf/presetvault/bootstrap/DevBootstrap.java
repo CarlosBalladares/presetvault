@@ -9,6 +9,7 @@ import com.carlosbf.presetvault.repositories.UserRepository;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
+import com.carlosbf.presetvault.model.SocialMediaLink.SocialMediaType;
 
 @Component
 public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> {
@@ -30,7 +31,7 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
 
     private void initData() {
         User emplexx = new User("emplexx", "blank", "emplexx");
-        SocialMediaLink sml = new SocialMediaLink("face", SocialMediaLink.SocialMediaType.DISCORD);
+        SocialMediaLink sml = new SocialMediaLink("face", SocialMediaType.DISCORD);
         emplexx.getSocialMediaLinks().add(sml);
 
         Pack p = new Pack("dope pack");

@@ -18,12 +18,10 @@ public class SocialMediaLink{
     public String url;
     public SocialMediaType type;
 
-    public SocialMediaLink(Long id, String url, SocialMediaType type) {
-        this.id = id;
+    public SocialMediaLink(String url, SocialMediaType type) {
         this.url = url;
         this.type = type;
     }
-
 
     public Long getId() {
         return id;
