@@ -24,10 +24,6 @@ public class SocialMediaLink{
         this.type = type;
     }
 
-    public SocialMediaLink(String url, SocialMediaType type) {
-        this.url = url;
-        this.type = type;
-    }
 
     public Long getId() {
         return id;
