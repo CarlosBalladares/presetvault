@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.function.Consumer;
 
 @Entity
 public class User {
@@ -17,7 +18,8 @@ public class User {
     private List<SocialMediaLink> socialMediaLinks;
     @OneToMany
     private List<Pack> presetPacks;
-    @ManyToMany
+    @OneToMany
+
     private List<User> followers;
     @ManyToMany
     private List<User> following;
@@ -127,8 +129,8 @@ public class User {
                 ", userName='" + userName + '\'' +
                 ", socialMediaLinks=" + socialMediaLinks +
                 ", presetPacks=" + presetPacks +
-                ", followers=" + followers +
-                ", following=" + following +
+//                ", followers=" + followers +
+//                ", following=" + following +
                 '}';
     }
 }

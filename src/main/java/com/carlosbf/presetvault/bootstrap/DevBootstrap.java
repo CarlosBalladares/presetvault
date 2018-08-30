@@ -44,9 +44,13 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> 
         userRepository.save(teslaX);
         userRepository.save(ravitex);
 
-        emplexx.getFollowers().add(teslaX);
-        emplexx.getFollowers().add(ravitex);
-        emplexx.getFollowers().add(emplexx);
+        teslaX.follow(emplexx);
+        ravitex.follow(emplexx);
+        emplexx.follow(emplexx);
+
+        System.out.println(emplexx);
+        System.out.println(teslaX);
+       // System.out.println(ravitex);
 
         userRepository.save(emplexx);
 
