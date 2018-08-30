@@ -1,0 +1,16 @@
+{
+  "name": "presetvault",
+  "version": "1.0.0",
+  "description": "app to share presets",
+  "main": "index.js",
+  "repository": "https://github.com/CarlosBalladares/presetvault.git",
+  "author": "carlosbf@protonmail.com",
+  "license": "MIT",
+  "private": false,
+  "scripts":{
+    "dev":"mvn spring-boot:run -Dspring-boot.run.arguments=--spring.profiles.active=dev",
+    "build":"mvn package",
+    "prod":"mvn clean && mvn package && java -jar target/presetvault-0.0.1-SNAPSHOT.jar --spring.profiles.active=prod",
+    "clean":"mvn clean"
+  }
+}
